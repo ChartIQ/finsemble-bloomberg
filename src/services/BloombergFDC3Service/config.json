@@ -1,0 +1,22 @@
+{
+    "comment": "Houses config for any custom services that you'd like to import into Finsemble.",
+    "services": {
+        "BloombergFDC3Service": {
+            "bootParams": {
+                "stage": "preuser",
+                "stopOnFailure": false,
+                "autoStart": true,
+                "customFailureMessage": null,
+                "timeout": 10000,
+                "dependencies": [
+                    "FDC3"
+                ]
+            },
+            "useWindow": true,
+            "active": true,
+            "name": "BloombergFDC3Service",
+            "visible": false,
+            "html": "$applicationRoot/services/BloombergFDC3Service/BloombergFDC3Service.html"
+        }
+    }
+}
