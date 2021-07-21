@@ -1,107 +1,65 @@
 {
-	"components": {
-		"Bloomberg Security Finder": {
-			"window": {
-				"url": "$applicationRoot/components/SecurityFinder/index.html",
-				"options": {
-					"resizable": true,
-					"autoShow": true,
-					"alwaysOnTop": false,
-					"securityPolicy": "trusted"
-				},
-				"top": "center",
-				"left": "center",
-				"width": 400,
-				"height": 400
-			},
-			"component": {
-				"preload": "$applicationRoot/clients/BloombergBridgeClient/BloombergBridgePreload.js",
-				"spawnOnStartup": false,
-				"singleton": false,
-				"showDevConsoleOnVisible": false
-			},
-			"foreign": {
-				"services": {
-					"windowService": {
-						"manageWindowMovement": true,
-						"allowAutoArrange": false,
-						"allowSnapping": true,
-						"allowTabbing": true,
-						"allowTiling": true,
-						"allowGrouping": true,
-						"allowMinimize": true
-					},
-					"workspace": {}
-				},
-				"components": {
-					"App Launcher": {
-						"launchableByUser": true
-					},
-					"Window Manager": {
-						"alwaysOnTopIcon": true,
-						"title": "BBG Security Finder",
-						"persistWindowState": true,
-						"hideMaximize": true,
-						"showLinker": true
-					},
-					"Toolbar": {
-						"iconClass": "ff-search"
-					}
-				}
-			}
-		},
-		"Bloomberg Security Finder FDC3": {
-			"window": {
-				"url": "$applicationRoot/components/SecurityFinder/index.html",
-				"options": {
-					"resizable": true,
-					"autoShow": true,
-					"alwaysOnTop": false,
-					"securityPolicy": "trusted"
-				},
-				"top": "center",
-				"left": "center",
-				"width": 450,
-				"height": 400
-			},
-			"component": {
-				"preload": [
-					"$applicationRoot/preloads/FDC3Client.js",
-					"$applicationRoot/clients/BloombergBridgeClient/BloombergBridgePreload.js"
-				],
-				"spawnOnStartup": false,
-				"singleton": false,
-				"showDevConsoleOnVisible": false
-			},
-			"foreign": {
-				"services": {
-					"windowService": {
-						"manageWindowMovement": true,
-						"allowAutoArrange": false,
-						"allowSnapping": true,
-						"allowTabbing": true,
-						"allowTiling": true,
-						"allowGrouping": true,
-						"allowMinimize": true
-					},
-					"workspace": {}
-				},
-				"components": {
-					"App Launcher": {
-						"launchableByUser": true
-					},
-					"Window Manager": {
-						"alwaysOnTopIcon": true,
-						"title": "BBG Security Finder (FDC3)",
-						"persistWindowState": true,
-						"hideMaximize": true,
-						"showLinker": true
-					},
-					"Toolbar": {
-						"iconClass": "ff-search"
-					}
-				}
-			}
-		}
-	}
+    "appd": {
+        "Bloomberg Security Finder": {
+            "appId": "Bloomberg Security Finder",
+            "name": "Bloomberg Security Finder",
+            "description": "An interface between Finsemble windows and Bloomberg, passing Securities through and doing lookups.",
+            "manifest": {
+                "window": {
+                    "url": "$applicationRoot/components/SecurityFinder/index.html",
+                    "addToWorkspace": true,
+                    "options": {
+                        "resizable": true,
+                        "autoShow": true,
+                        "alwaysOnTop": false,
+                        "securityPolicy": "trusted"
+                    },
+                    "top": "center",
+                    "left": "center",
+                    "width": 450,
+                    "height": 400
+                },
+                "component": {
+                    "preload": [
+                        "$applicationRoot/preloads/FDC3Client.js",
+                        "$applicationRoot/clients/BloombergBridgeClient/BloombergBridgePreload.js"
+                    ],
+                    "spawnOnStartup": false,
+                    "singleton": false,
+                    "showDevConsoleOnVisible": false
+                },
+                "foreign": {
+                    "services": {
+                        "windowService": {
+                            "manageWindowMovement": true,
+                            "allowAutoArrange": false,
+                            "allowSnapping": true,
+                            "allowTabbing": true,
+                            "allowTiling": true,
+                            "allowGrouping": true,
+                            "allowMinimize": true
+                        },
+                        "workspace": {}
+                    },
+                    "components": {
+                        "App Launcher": {
+                            "launchableByUser": true
+                        },
+                        "Window Manager": {
+                            "alwaysOnTopIcon": true,
+                            "title": "BBG Security Finder (FDC3)",
+                            "persistWindowState": true,
+                            "hideMaximize": true,
+                            "showLinker": true
+                        },
+                        "Toolbar": {
+                            "iconClass": "ff-search"
+                        }
+                    }
+                }
+            },
+            "version": "1.0.0",
+            "tooltip": "Bloomberg Security Finder"
+        }
+    }
 }

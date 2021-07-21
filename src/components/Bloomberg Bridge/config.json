@@ -1,87 +1,74 @@
 {
-	"components": {
-		"Bloomberg Bridge Debug": {
-			"window": {
-				"id": "Bloomberg Bridge Debug",
-				"windowType": "native",
-				"path": "$bloombergBridgeFolder/bin/Debug/BloombergBridge.exe",
-				"arguments": "",
-				"options": {
-					"autoShow": true,
-					"alwaysOnTop": false,
-					"resizable": true,
-					"showTaskbarIcon": true
-				},
-				"addToWorkspace": false,
-				"height": 250,
-				"width": 300
-			},
-			"component": {
-				"spawnOnStartup": false
-			},
-			"foreign": {
-				"services": {
-					"workspaceService": {
-						"canGroup": true,
-						"isArrangable": true
-					}
-				},
-				"components": {
-					"App Launcher": {
-						"launchableByUser": true
-					},
-					"Window Manager": {
-						"persistWindowState": false,
-						"FSBLHeader": true,
-						"showLinker": true
-					},
-					"Toolbar": {
-						"iconClass": "ff-component"
-					}
-				}
-			}
-		},
-		"Bloomberg Bridge Release": {
-			"window": {
-				"id": "Bloomberg Bridge",
-				"windowType": "native",
-				"alias": "bloomberg_bridge",
-				"arguments": "",
-				"options": {
-					"autoShow": true,
-					"alwaysOnTop": false,
-					"resizable": true,
-					"showTaskbarIcon": true
-				},
-				"addToWorkspace": false,
-				"height": 250,
-				"width": 300
-			},
-			"component": {
-				"spawnOnStartup": false,
-				"displayName": "Bloomberg Bridge"
-			},
-			"foreign": {
-				"services": {
-					"workspaceService": {
-						"canGroup": true,
-						"isArrangable": true
-					}
-				},
-				"components": {
-					"App Launcher": {
-						"launchableByUser": true
-					},
-					"Window Manager": {
-						"persistWindowState": false,
-						"FSBLHeader": true,
-						"showLinker": true
-					},
-					"Toolbar": {
-						"iconClass": "ff-component"
-					}
-				}
-			}
-		}
-	}
+    "appd": {
+        "Bloomberg Bridge Debug": {
+            "appId": "Bloomberg Bridge Debug",
+            "name": "Bloomberg Bridge Debug",
+            "description": "The debugging version of the Bloomberg Bridge process that connects Finsemble to Bloomberg Terminal Connect.",
+            "manifest": {
+                "window": {
+                    "path": "$bloombergBridgeFolder/bin/Debug/BloombergBridge.exe",
+                    "windowType": "native",
+                    "arguments": "",
+                    "addToWorkspace": false,
+                    "height": 250,
+                    "width": 300
+                },
+                "component": {
+                    "spawnOnStartup": false
+                },
+                "foreign": {
+                    "components": {
+                        "App Launcher": {
+                            "launchableByUser": true
+                        },
+                        "Toolbar": {
+                            "iconClass": "ff-component"
+                        },
+                        "Window Manager": {
+                            "FSBLHeader": true,
+                            "persistWindowState": false,
+                            "showLinker": true
+                        }
+                    }
+                }
+            },
+            "version": "1.0.0",
+            "tooltip": "Bloomberg Bridge Debug"
+        },
+        "Bloomberg Bridge": {
+            "appId": "Bloomberg Bridge",
+            "name": "Bloomberg Bridge",
+            "description": "The Bloomberg Bridge process that connects Finsemble to Bloomberg Terminal Connect.",
+            "manifest": {
+                "window": {
+                    "alias": "bloomberg_bridge",
+                    "windowType": "native",
+                    "arguments": "",
+                    "addToWorkspace": false,
+                    "height": 250,
+                    "width": 300
+                },
+                "component": {
+                    "spawnOnStartup": true
+                },
+                "foreign": {
+                    "components": {
+                        "App Launcher": {
+                            "launchableByUser": true
+                        },
+                        "Toolbar": {
+                            "iconClass": "ff-component"
+                        },
+                        "Window Manager": {
+                            "FSBLHeader": true,
+                            "persistWindowState": false,
+                            "showLinker": true
+                        }
+                    }
+                }
+            },
+            "version": "1.0.0",
+            "tooltip": "Bloomberg Bridge"
+        }
+    }
 }
