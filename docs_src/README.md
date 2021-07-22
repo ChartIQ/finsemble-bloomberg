@@ -210,7 +210,7 @@ Some traders have multiple computers on their desks. Hence, Bloomberg Terminal C
 
 ### Remote connection requirements
 
-Bloomberg Terminal Connect to allow a connection to a remote terminal, a number of requirements must be satisfied:
+For Bloomberg Terminal Connect to allow a connection to a remote terminal, a number of requirements must be satisfied:
 
 - Both the local and remote machines must be connected to an Active Directory and be logged into the same user account,
 - TCP Port 445 must be open on the remote machine

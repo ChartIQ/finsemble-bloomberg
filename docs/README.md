@@ -206,14 +206,14 @@ To manually install the integration into your Finsemble project:
    ```
    npm install react-tabs react-select react-autosuggest
    ```
-
+   
 ## Working with a Remote terminal
 
 Some traders have multiple computers on their desks. Hence, Bloomberg Terminal Connect supports connecting to a Bloomberg terminal running on a different machine (a remote terminal) so that apps can still integrate with it without having to run on the same device. When working with a remote terminal Bloomberg Bridge should be run on the same machine as your Finsemble desktop and be launched by Finsemble as normal, however it will be configured to register with the remote machine by machine name or IP address.
 
 ### Remote connection requirements
 
-Bloomberg Terminal Connect to allow a connection to a remote terminal, a number of requirements must be satisfied:
+For Bloomberg Terminal Connect to allow a connection to a remote terminal, a number of requirements must be satisfied:
 
 - Both the local and remote machines must be connected to an Active Directory and be logged into the same user account,
 - TCP Port 445 must be open on the remote machine
