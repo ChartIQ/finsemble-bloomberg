@@ -1,36 +1,44 @@
 {
-	"components": {
-		"Bloomberg Terminal": {
-			"window": {
-				"id": "Bloomberg Terminal",
-				"name": "Bloomberg Terminal",
-				"windowType": "assimilation",
-				"path": "C:/blp/Wintrv/wintrv.exe",
-				"addToWorkspace": false
-			},
-			"component": {
-				"inject": false
-			},
-			"foreign": {
-				"services": {
-					"workspaceService": {
-						"manageWindowMovement ": false,
-						"isArrangable": false
-					}
-				},
-				"components": {
-					"App Launcher": {
-						"launchableByUser": true
-					},
-					"Window Manager": {
-						"persistWindowState": false,
-						"FSBLHeader" : false
-					},
-					"Toolbar": {
-						"iconClass": "ff-component"
-					}
-				}
-			}
-		}
-	}
+    "appd": {
+        "Bloomberg Terminal": {
+            "appId": "Bloomberg Terminal",
+            "name": "Bloomberg Terminal",
+            "description": "Open the local Bloomberg Terminal on this machine.",
+            "manifest": {
+                "window": {
+                    "path": "C:/blp/Wintrv/wintrv.exe",
+                    "addToWorkspace": false,
+                    "windowType": "assimilation"
+                },
+                "foreign": {
+                    "components": {
+                        "App Launcher": {
+                            "launchableByUser": true
+                        },
+                        "Toolbar": {
+                            "iconClass": "ff-component"
+                        },
+                        "Window Manager": {
+                            "FSBLHeader": false,
+                            "persistWindowState": false
+                        }
+                    }
+                },
+                "interop": {
+                    "rewire": [
+                        {
+                            "contextType": "layout",
+                            "fwd": "#Workspace"
+                        },
+                        {
+                            "contextType": "fdc3.instrument",
+                            "cc": "#Workspace"
+                        }
+                    ]
+                }
+            },
+            "version": "1.0.0",
+            "tooltip": "Bloomberg Terminal"
+        }
+    }
 }

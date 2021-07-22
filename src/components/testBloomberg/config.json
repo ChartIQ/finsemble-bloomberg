@@ -1,51 +1,59 @@
 {
-	"components": {
-		"Bloomberg test component": {
-			"window": {
-				"url": "$applicationRoot/components/testBloomberg/testBloomberg.html",
-				"options": {
-					"resizable": true,
-					"autoShow": true,
-					"alwaysOnTop": false
-				},
-				"top": "center",
-				"left": "center",
-				"width": 800,
-				"height": 600
-			},
-			"component": {
-				"preload": false,
-				"spawnOnStartup": false,
-				"singleton": false,
-				"showDevConsoleOnVisible": false
-			},
-			"foreign": {
-				"services": {
-					"windowService": {
-						"manageWindowMovement": true,
-						"allowAutoArrange": true,
-						"allowSnapping": true,
-						"allowTabbing": true,
-						"allowTiling": true,
-						"allowGrouping": true,
-						"allowMinimize": true
-					},
-					"workspace": {}
-				},
-				"components": {
-					"App Launcher": {
-						"launchableByUser": true
-					},
-					"Window Manager": {
-						"alwaysOnTopIcon": true,
-						"title": "testBloomberg",
-						"persistWindowState": true
-					},
-					"Toolbar": {
-						"iconURL": "$applicationRoot/components/testBloomberg/Finsemble_Taskbar_Icon.png"
-					}
-				}
-			}
-		}
-	}
+    "appd": {
+        "Bloomberg test component": {
+            "appId": "Bloomberg test component",
+            "name": "Bloomberg test component",
+            "description": "The Bloomberg test component makes testing Bloomberg functionality in a single location easier.",
+            "manifest": {
+                "window": {
+                    "url": "$applicationRoot/components/testBloomberg/testBloomberg.html",
+                    "addToWorkspace": true,
+                    "options": {
+                        "resizable": true,
+                        "autoShow": true,
+                        "alwaysOnTop": false
+                    },
+                    "top": "center",
+                    "left": "center",
+                    "width": 800,
+                    "height": 600
+                },
+                "component": {
+                    "spawnOnStartup": false,
+                    "preload": false,
+                    "singleton": false,
+                    "showDevConsoleOnVisible": false
+                },
+                "foreign": {
+                    "services": {
+                        "windowService": {
+                            "manageWindowMovement": true,
+                            "allowAutoArrange": true,
+                            "allowSnapping": true,
+                            "allowTabbing": true,
+                            "allowTiling": true,
+                            "allowGrouping": true,
+                            "allowMinimize": true
+                        },
+                        "workspace": {}
+                    },
+                    "components": {
+                        "App Launcher": {
+                            "launchableByUser": true
+                        },
+                        "Window Manager": {
+                            "alwaysOnTopIcon": true,
+                            "title": "testBloomberg",
+                            "persistWindowState": true
+                        },
+                        "Toolbar": {
+                            "iconURL": "$applicationRoot/components/testBloomberg/Finsemble_Taskbar_Icon.png"
+                        }
+                    }
+                }
+            },
+            "version": "1.0.0",
+            "tooltip": "Bloomberg test component"
+        }
+    }
 }

@@ -126,17 +126,19 @@ export const BloombergPreferences = () => {
     }
 
     function updateAddress() {
-        setBbgRemoteAddress(document.getElementById('address').value);
+        const remoteAddress = document.getElementById("address").value;
             FSBL.Clients.ConfigClient.setPreference({
                 field: "finsemble.custom.bloomberg.remoteAddress",
-                value: bbgRemoteAddress
+                value: remoteAddress
             }, (err, response) => {
                 //preference has been set
             });
+        setBbgRemoteAddress(remoteAddress);
     }
 
     const addressInput = React.createElement("input", {
         id: "address",
+        name: "address",
         type: "text",
         style: {
             backgroundColor: "var(--core-primary)",
